@@ -24,7 +24,19 @@ sc_X = StandardScaler()
 X_train = sc_X.fit_transform(X_train)
 X_test = sc_X.transform(X_test)
 
+from sklearn import preprocessing
+le_X = preprocessing.LabelEncoder()
+X[:,0] = le_X.fit_transform(X[:,0])
 
+
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.compose import ColumnTransformer
+ 
+ct = ColumnTransformer(
+    [('one_hot_encoder', OneHotEncoder(categories='auto'), [0])],   
+    remainder='passthrough'                        
+)
+X = np.array(ct.fit_transform(X), dtype=np.float)
 # Ajustar el clasificador en el Conjunto de Entrenamiento
 # Crear el modelo de clasificación aquí
 
