@@ -3,13 +3,13 @@
 """
 Created on Wed Mar 25 21:15:07 2020
 
-@author: cesar
+@author: Cesar Arcos
 """
 
-# Clasificación con árboles de Decisión
+# Decision Tree classifier
 
 
-# Cómo importar las librerías
+# Import the libraries
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -21,25 +21,25 @@ X = dataset.iloc[:, [2,3]].values
 y = dataset.iloc[:, 4].values
 
 
-# Dividir el data set en conjunto de entrenamiento y conjunto de testing
+# Split the dataset into training and testing set 
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)
 
 
-# Ajustar el clasificador de Árbol de Decisión en el Conjunto de Entrenamiento
+# Train the classifier
 from sklearn.tree import DecisionTreeClassifier
 classifier = DecisionTreeClassifier(criterion = "entropy", random_state = 0)
 classifier.fit(X_train, y_train)
 
 
-# Predicción de los resultados con el Conjunto de Testing
+# Predict
 y_pred  = classifier.predict(X_test)
 
-# Elaborar una matriz de confusión
+# Confusion Matrix
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
 
-# Representación gráfica de los resultados del algoritmo en el Conjunto de Entrenamiento
+# Graphic representation of the results in training set 
 from matplotlib.colors import ListedColormap
 X_set, y_set = X_train, y_train
 X1, X2 = np.meshgrid(np.arange(start = X_set[:, 0].min() - 1, stop = X_set[:, 0].max() + 1, step = 1),
@@ -51,14 +51,14 @@ plt.ylim(X2.min(), X2.max())
 for i, j in enumerate(np.unique(y_set)):
     plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
                 c = ListedColormap(('red', 'green'))(i), label = j)
-plt.title('Árbol de Decisión (Conjunto de Entrenamiento)')
-plt.xlabel('Edad')
-plt.ylabel('Sueldo Estimado')
+plt.title('Decision tree (Training set)')
+plt.xlabel('Age')
+plt.ylabel('Estimated Salary')
 plt.legend()
 plt.show()
 
 
-# Representación gráfica de los resultados del algoritmo en el Conjunto de Testing
+# Graphic representation of the results in testing set 
 X_set, y_set = X_test, y_test
 X1, X2 = np.meshgrid(np.arange(start = X_set[:, 0].min() - 1, stop = X_set[:, 0].max() + 1, step = 1),
                      np.arange(start = X_set[:, 1].min() - 1, stop = X_set[:, 1].max() + 1, step = 500))
@@ -69,8 +69,8 @@ plt.ylim(X2.min(), X2.max())
 for i, j in enumerate(np.unique(y_set)):
     plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
                 c = ListedColormap(('red', 'green'))(i), label = j)
-plt.title('Árbol de Decisión (Conjunto de Test)')
-plt.xlabel('Edad')
-plt.ylabel('Sueldo Estimado')
+plt.title('Árbol de Decisión (Test set)')
+plt.xlabel('Age')
+plt.ylabel('Estimated Salary')
 plt.legend()
 plt.show()
