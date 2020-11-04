@@ -36,7 +36,7 @@ classifier.fit(X_train, Y_train)
 y_pred = classifier.predict(X_test)
 
 
-# confsion matrix
+# confusion matrix
 
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(Y_test,y_pred)
@@ -55,14 +55,14 @@ plt.ylim(X2.min(), X2.max())
 for i, j in enumerate(np.unique(y_set)):
     plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
                 c = ListedColormap(('red', 'green'))(i), label = j)
-plt.title('Clasificador (Conjunto de Entrenamiento)')
-plt.xlabel('Edad')
-plt.ylabel('Sueldo Estimado')
+plt.title('Classifier (training set)')
+plt.xlabel('Age')
+plt.ylabel('Estimated Salary')
 plt.legend()
 plt.show()
 
 
-# Representación gráfica de los resultados del algoritmo en el Conjunto de Testing
+# Graphic representation of the results in testing set 
 X_set, y_set = X_test, y_test
 X1, X2 = np.meshgrid(np.arange(start = X_set[:, 0].min() - 1, stop = X_set[:, 0].max() + 1, step = 0.01),
                      np.arange(start = X_set[:, 1].min() - 1, stop = X_set[:, 1].max() + 1, step = 0.01))
@@ -73,9 +73,9 @@ plt.ylim(X2.min(), X2.max())
 for i, j in enumerate(np.unique(y_set)):
     plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
                 c = ListedColormap(('red', 'green'))(i), label = j)
-plt.title('Clasificador (Conjunto de Test)')
-plt.xlabel('Edad')
-plt.ylabel('Sueldo Estimado')
+plt.title('Classifier (Test set)')
+plt.xlabel('Age')
+plt.ylabel('Estimated Salary')
 plt.legend()
 plt.show()
 
