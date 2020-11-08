@@ -1,6 +1,6 @@
 # Introduction
-I use this repository as a "template" for machine learning codes
+I use this repository as a "template" for machine learning 
 ## Author
-- César Arcos Gonzaléz
+- César Arcos
 ## Contact information
-- racec9999@gmail.com
+- cesar99ag@gmail.com
