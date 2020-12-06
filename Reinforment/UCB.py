@@ -5,18 +5,13 @@ Created on Tue Apr  7 11:09:41 2020
 
 @author: cesar
 """
-
 # Upper Confidence Bound (UCB)
-
-# iMORT LIBRABRIES
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import math
-
-# DATASET LOAD
+# Import the dataset
 dataset = pd.read_csv("Ads_CTR_Optimisation.csv")
-
 # UCB ALGORITHM
 N = 10000
 d = 10
@@ -43,27 +38,9 @@ for n in range(0, N):
     reward = dataset.values[n, ad]
     sums_of_rewards[ad] = sums_of_rewards[ad] + reward
     total_reward = total_reward + reward
-    
-    
-    
-# HREsuts Histogram
+# Results Histogram
 plt.hist(ads_selected)
 plt.title("Ads Histogram")
 plt.xlabel("Ads ID")
 plt.ylabel("Ads visualization frecuency")
 plt.show()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
