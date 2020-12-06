@@ -5,18 +5,14 @@ Created on Tue Apr  7 17:40:15 2020
 
 @author: cesar
 """
-
-# Muestreo Thompson
-
-# Importar las librerías
+# Thompson Sampling
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-# Cargar el dataset
+# Import the dataset
 dataset = pd.read_csv("Ads_CTR_Optimisation.csv")
-
-# Algoritmo de Muestreo Thompson
+# Thompson Sampling Algorithm
 import random
 N = 10000
 d = 10
@@ -39,10 +35,9 @@ for n in range(0, N):
     else:
         number_of_rewards_0[ad] = number_of_rewards_0[ad] + 1
     total_reward = total_reward + reward
-    
-# Histograma de resultados
+# Result Histogram
 plt.hist(ads_selected)
-plt.title("Histograma de anuncios")
-plt.xlabel("ID del Anuncio")
-plt.ylabel("Frecuencia de visualización del anuncio")
+plt.title("Ads Histogram")
+plt.xlabel("Ads ID")
+plt.ylabel("Ads visualization frecuency")
 plt.show()
