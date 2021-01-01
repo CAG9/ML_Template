@@ -2,14 +2,13 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Apr  7 17:40:15 2020
-
-@author: cesar
+@author: Cesar Arcos
+Contact info: cesar99ag@gmail.com
 """
 # Thompson Sampling
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-
 # Import the dataset
 dataset = pd.read_csv("Ads_CTR_Optimisation.csv")
 # Thompson Sampling Algorithm
