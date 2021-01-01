@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Apr  7 11:09:41 2020
-
-@author: cesar
+@author: Cesar Arcos
+Contact info: cesar99ag@gmail.com
 """
 # Upper Confidence Bound (UCB)
 import numpy as np
