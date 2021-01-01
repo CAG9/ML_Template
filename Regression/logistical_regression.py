@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Mar 21 21:04:54 2020
+@author: Cesar Arcos
+Contact info: cesar99ag@gmail.com
+"""
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -34,9 +41,9 @@ plt.ylim(X2.min(), X2.max())
 for i, j in enumerate(np.unique(y_set)):
     plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
                 c = ListedColormap(('red', 'green'))(i), label = j)
-plt.title('Clasificador (Conjunto de Entrenamiento)')
-plt.xlabel('Edad')
-plt.ylabel('Sueldo Estimado')
+plt.title('Classifier (Training Set)')
+plt.xlabel('Age')
+plt.ylabel('Estimated Salary')
 plt.legend()
 plt.show()
 # Graphic representation of the results in testing set
@@ -50,8 +57,8 @@ plt.ylim(X2.min(), X2.max())
 for i, j in enumerate(np.unique(y_set)):
     plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
                 c = ListedColormap(('red', 'green'))(i), label = j)
-plt.title('Clasificador (Conjunto de Test)')
-plt.xlabel('Edad')
-plt.ylabel('Sueldo Estimado')
+plt.title('Classifier (Test set)')
+plt.xlabel('Age')
+plt.ylabel('Estimated Salary')
 plt.legend()
 plt.show()
