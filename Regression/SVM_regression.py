@@ -2,10 +2,9 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sat Mar 21 12:31:37 2020
-
 @author: Cesar Arcos
+Contact info: cesar99ag@gmail.com
 """
-#Import libraries
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
