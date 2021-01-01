@@ -1,5 +1,6 @@
 # Introduction
-I use this repository as a "template" for machine learning 
+Machine learning using Python and Scikit-learn
+You can use this repository as a "template" for machine learning.
 ## Author
 - César Arcos
 ## Contact information
