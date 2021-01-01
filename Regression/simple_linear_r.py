@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Mar 24 11:45:38 2020
+@author: Cesar Arcos
+Contact info: cesar99ag@gmail.com
+"""
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
