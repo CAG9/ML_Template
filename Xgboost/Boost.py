@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Apr 12 11:49:42 2020
-
-@author: cesar
+@author: Cesar Arcos
+Contact info: cesar99ag@gmail.com
 """
 # XGBoost
 # You may watch the instalation instruction here : http://xgboost.readthedocs.io/en/latest/build.html
