@@ -2,49 +2,33 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Mar 24 10:06:30 2020
-
 @author: Cesar Arcos
+Contact info: cesar99ag@gmail.com
 """
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-
 # Import the dataset
 dataset = pd.read_csv('Social_Network_Ads.csv')
-
 X = dataset.iloc[:, [2,3]].values
 y = dataset.iloc[:, 4].values
-
 # Split the dataset into training and testing set 
-
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)
-
-
 # Scale the data
-
-
 from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler()
 X_train = sc_X.fit_transform(X_train)
 X_test = sc_X.transform(X_test)
-
-
-
 # Train the classifier
 from sklearn.neighbors import KNeighborsClassifier
 classifier = KNeighborsClassifier(n_neighbors = 5, metric = "minkowski", p = 2)
 classifier.fit(X_train, y_train)
-
 # Predict
 y_pred = classifier.predict(X_test)
-
-
 # Confusion Matrix
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(Y_test,y_pred)
-
-
 from matplotlib.colors import ListedColormap
 X_set, y_set = X_train, y_train
 X1, X2 = np.meshgrid(np.arange(start = X_set[:, 0].min() - 1, stop = X_set[:, 0].max() + 1, step = 0.01),
@@ -61,7 +45,6 @@ plt.xlabel('Age')
 plt.ylabel('Estimated Salary')
 plt.legend()
 plt.show()
-
 # Graphic representation of the results in testing set 
 X_set, y_set = X_test, y_test
 X1, X2 = np.meshgrid(np.arange(start = X_set[:, 0].min() - 1, stop = X_set[:, 0].max() + 1, step = 0.01),
@@ -78,11 +61,3 @@ plt.xlabel('Age')
 plt.ylabel('Estimated Salary')
 plt.legend()
 plt.show()
-
-
-
-
-
-
-
-
