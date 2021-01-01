@@ -1,9 +1,11 @@
 #!/usr/bin/env python
-
+# -*- coding: utf-8 -*-
 """
-a simple implementation of Apriori algorithm by Python.
+A simple implementation of Apriori algorithm by Python.
+Created on Mon Apr  7 12:51:03 2020
+@author: Cesar Arcos
+Contact info: cesar99ag@gmail.com
 """
-
 import sys
 import csv
 import argparse
@@ -12,14 +14,10 @@ import os
 from collections import namedtuple
 from itertools import combinations
 from itertools import chain
-
-
 # Meta informations.
 __version__ = '1.1.1'
 __author__ = 'Yu Mochizuki'
 __author_email__ = 'ymoch.dev@gmail.com'
-
-
 ################################################################################
 # Data structures.
 ################################################################################
