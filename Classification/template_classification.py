@@ -1,37 +1,24 @@
 # Classifier Template
-
-
-#Import libraries
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-
 # Import the dataset
 dataset = pd.read_csv('Social_Network_Ads.csv')
-
 X = dataset.iloc[:, [2,3]].values
 y = dataset.iloc[:, 4].values
-
-
 # Split the dataset into training and testing set 
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)
-
-
 # Scale the data
 from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler()
 X_train = sc_X.fit_transform(X_train)
 X_test = sc_X.transform(X_test)
-
 from sklearn import preprocessing
 le_X = preprocessing.LabelEncoder()
 X[:,0] = le_X.fit_transform(X[:,0])
-
-
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
- 
 ct = ColumnTransformer(
     [('one_hot_encoder', OneHotEncoder(categories='auto'), [0])],   
     remainder='passthrough'                        
@@ -39,16 +26,11 @@ ct = ColumnTransformer(
 X = np.array(ct.fit_transform(X), dtype=np.float)
 # Train the classifier
 # Create the classifier here
-
-
-
 # Predict
 y_pred  = classifier.predict(X_test)
-
 # Confusion Matrix
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
-
 # Graphic representation of the results in training set 
 from matplotlib.colors import ListedColormap
 X_set, y_set = X_train, y_train
@@ -66,8 +48,6 @@ plt.xlabel('Age')
 plt.ylabel('Estimated Salary')
 plt.legend()
 plt.show()
-
-
 # Graphic representation of the results in testing set 
 X_set, y_set = X_test, y_test
 X1, X2 = np.meshgrid(np.arange(start = X_set[:, 0].min() - 1, stop = X_set[:, 0].max() + 1, step = 0.01),
