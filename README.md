@@ -1,8 +1,7 @@
 # Machine Learning Template
-## Introduction
+## About: 
 Machine learning using Python and Scikit-learn.<br> 
 You can use this repository as a "template" for machine learning.
 ## Author
-- César Arcos
-## Contact information
-- cesar99ag@gmail.com
+- Cesar Arcos-Gonzalez: cesar99ag@gmail.com
+
