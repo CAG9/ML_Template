@@ -1,5 +1,5 @@
 # Machine Learning Template
-## About: 
+## About:
 Machine learning using Python and Scikit-learn.<br> 
 You can use this repository as a "template" for machine learning.
 ## Author
