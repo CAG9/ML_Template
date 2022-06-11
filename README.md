@@ -6,3 +6,5 @@ You can use this repository as a "template" for machine learning.
 - Cesar Arcos-Gonzalez: cesar99ag@gmail.com
 ## License
 GNU GENERAL PUBLIC LICENSE
+## Tools
+- Python
