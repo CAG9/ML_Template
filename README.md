@@ -8,3 +8,4 @@ You can use this repository as a "template" for machine learning.
 GNU GENERAL PUBLIC LICENSE
 ## Tools
 - Python
+- Scikit-learn
