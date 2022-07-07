@@ -7,6 +7,6 @@ You can use this repository as a "template" for machine learning.
 ## License
 GNU GENERAL PUBLIC LICENSE
 ## Tools
-- Python
+- Python 3
 - Scikit-learn
 - Xgboost 
