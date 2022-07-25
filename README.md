@@ -10,3 +10,4 @@ GNU GENERAL PUBLIC LICENSE
 - Python 3
 - Scikit-learn
 - Xgboost 
+- Pandas
